@@ -21,7 +21,10 @@ class DigitalFactory {
 	}
 
 	public InputDeviceInterface makeNewInput(String name) {
-		Assert.toBeDone() ; return null ;
+		//Creates an in instance of the InputDevice Class
+		InputDevice iDevice = new InputDevice(name);
+		//Assert.toBeDone() ; return null ;
+		return iDevice;
 	}
 
 	public DeviceInterface makeNewAndGate(String name) {
