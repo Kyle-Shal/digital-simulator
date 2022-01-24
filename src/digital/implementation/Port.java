@@ -22,7 +22,12 @@ public class Port implements PortInterface{
 
 	@Override
 	public Value getValue() {
-		return portValue;
+		if (portValue != null) {
+			return portValue;
+		}
+		else {
+			return Value.UNKNOWN;
+		}
 	}
 
 }

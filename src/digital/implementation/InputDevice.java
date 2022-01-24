@@ -6,53 +6,34 @@ import digital.interfaces.Value;
 
 /** Design for an input device
  */	
-public class InputDevice implements InputDeviceInterface{
-	private String name;
-	/** Every input device has 0 or at most 1 output port.
-	 */	
-	PortInterface port;
-
+public class InputDevice extends Device implements InputDeviceInterface{
+	
 	Value[] values;
-	int clockCounter=0;
+	int clockCounter = 0;
 	
-	
-	InputDevice(String name) {
-		this.name = name;
-		port = new Port(true);
-	}
-	@Override
-	public String getName() {
-		return name;
+	public InputDevice(String name) {
+		super(name);
 	}
 
 	@Override
-	public int numberOfPorts() {
-		return 1;
+	public void setInputSequence(Value[] values) {
+		this.values = values;		
 	}
 
 	@Override
-	public PortInterface getPort(int portNumber) {
-		return port;
-	}
-
-	@Override
-	public boolean update() {  
+	public boolean update() {
 		return false;
 	}
 
 	@Override
 	public void clock() {
 		if (clockCounter < values.length) {
-			port.setValue(values[clockCounter]);
+			outputPort.setValue(values[clockCounter]);
 			clockCounter =clockCounter +1;
 		}else {
-			port.setValue(Value.UNKNOWN);
-		}	
+			outputPort.setValue(Value.UNKNOWN);
+		}		
 	}
-
-	@Override
-	public void setInputSequence(Value[] values) {
-		this.values = values;
-	}
+	
 
 }
