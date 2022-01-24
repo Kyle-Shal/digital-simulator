@@ -4,6 +4,8 @@ import digital.interfaces.InputDeviceInterface;
 import digital.interfaces.PortInterface;
 import digital.interfaces.Value;
 
+/** Design for an input device
+ */	
 public class InputDevice implements InputDeviceInterface{
 	private String name;
 	/** Every input device has 0 or at most 1 output port.
@@ -17,8 +19,6 @@ public class InputDevice implements InputDeviceInterface{
 	InputDevice(String name) {
 		this.name = name;
 		port = new Port(true);
-		
-		
 	}
 	@Override
 	public String getName() {

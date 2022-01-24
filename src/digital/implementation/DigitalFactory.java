@@ -40,6 +40,8 @@ class DigitalFactory {
 	}
 
 	public DeviceInterface makeNewDFlipFlop(String name) {
-		Assert.toBeDone() ; return null ;
+		//Creates an instance of the DFLipFLop
+		DFlipFlop flipFlop = new DFlipFlop(name);
+		return flipFlop ;
 	}
 }
