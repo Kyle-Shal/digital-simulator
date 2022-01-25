@@ -21,9 +21,7 @@ class DigitalFactory {
 	}
 
 	public InputDeviceInterface makeNewInput(String name) {
-		//Creates an in instance of the InputDevice Class
 		InputDevice iDevice = new InputDevice(name);
-		//Assert.toBeDone() ; return null ;
 		return iDevice;
 	}
 
@@ -33,7 +31,8 @@ class DigitalFactory {
 	}
 
 	public DeviceInterface makeNewNotGate(String name) {
-		Assert.toBeDone() ; return null ;
+		NotGate notGate = new NotGate(name);
+		return notGate;
 	}
 
 	public DeviceInterface makeNewOrGate(String name) {
