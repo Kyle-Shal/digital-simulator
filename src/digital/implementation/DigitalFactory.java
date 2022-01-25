@@ -28,7 +28,8 @@ class DigitalFactory {
 	}
 
 	public DeviceInterface makeNewAndGate(String name) {
-		Assert.toBeDone() ; return null ;
+		AndGate andGate = new AndGate(name);
+		return andGate;
 	}
 
 	public DeviceInterface makeNewNotGate(String name) {
