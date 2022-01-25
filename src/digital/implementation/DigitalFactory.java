@@ -1,6 +1,5 @@
 package digital.implementation;
 
-import util.Assert;
 import digital.interfaces.DeviceInterface;
 import digital.interfaces.InputDeviceInterface;
 import digital.interfaces.NetInterface;
@@ -36,8 +35,8 @@ class DigitalFactory {
 	}
 
 	public DeviceInterface makeNewOrGate(String name) {
-		Assert.toBeDone() ; return null ;
-	}
+		OrGate orGate = new OrGate(name);
+		return orGate;	}
 
 	public DeviceInterface makeNewDFlipFlop(String name) {
 		//Creates an instance of the DFLipFLop

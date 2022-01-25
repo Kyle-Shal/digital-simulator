@@ -10,17 +10,16 @@ import digital.interfaces.Value;
  * @author kyles
  *
  */
-public class AndGate extends Device {
+public class OrGate extends Device {
 	PortInterface inputPort1;
 	PortInterface inputPort2;
-
-	public AndGate(String name) {
+	
+	public OrGate(String name) {
 		super(name);
 		inputPort1 = new Port(false);
 		ports.add(inputPort1);	
 		inputPort2 = new Port(false);
-		ports.add(inputPort2);
-	}
+		ports.add(inputPort2);	}
 
 	@Override
 	public boolean update() {
@@ -29,14 +28,14 @@ public class AndGate extends Device {
 		Value oldOutputValue = outputPort.getValue();
 
 		
-		if (tempValue == Value.FALSE || tempValue2 == Value.FALSE) {
-			outputPort.setValue(Value.FALSE);
-			if (oldOutputValue != Value.FALSE) {
-				return true;
-			}
-		}else if(tempValue == Value.TRUE && tempValue2 == Value.TRUE) {
+		if (tempValue == Value.TRUE || tempValue2 == Value.TRUE) {
 			outputPort.setValue(Value.TRUE);
 			if (oldOutputValue != Value.TRUE) {
+				return true;
+			}
+		}else if(tempValue == Value.FALSE && tempValue2 == Value.FALSE) {
+			outputPort.setValue(Value.FALSE);
+			if (oldOutputValue != Value.FALSE) {
 				return true;
 			}
 			
@@ -50,8 +49,6 @@ public class AndGate extends Device {
 	}
 
 	@Override
-	public void clock() {
-
-	}
+	public void clock() {}
 
 }
