@@ -1,12 +1,16 @@
 /**
- * 
+ * Name: Kyle Shal
+ * Student Number: 201923810
+ * Email: kashal@mun.ca
  */
 package digital.implementation;
 
 import digital.interfaces.PortInterface;
 import digital.interfaces.Value;
 
-/**
+/**D stands for Delay. D-flip-flops have one output port (port 0) and one input port (port 1).
+ *  On each clock edge, the input value is transferred to the output. 
+ *  On update, there is no change to the output.
  * @author kyles
  *
  */

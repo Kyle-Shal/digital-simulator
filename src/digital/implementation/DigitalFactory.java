@@ -1,3 +1,8 @@
+/**
+ * Name: Kyle Shal
+ * Student Number: 201923810
+ * Email: kashal@mun.ca
+ */
 package digital.implementation;
 
 import digital.interfaces.DeviceInterface;
@@ -13,7 +18,6 @@ import digital.interfaces.NetInterface;
  *
  */
 class DigitalFactory {
-
 
 	public NetInterface makeNewNet(String name) {
 		return new Net( name ) ;

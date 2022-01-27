@@ -1,12 +1,22 @@
 /**
- * 
+ * Name: Kyle Shal
+ * Student Number: 201923810
+ * Email: kashal@mun.ca
  */
 package digital.implementation;
 
 import digital.interfaces.PortInterface;
 import digital.interfaces.Value;
 
-/**
+/** Each Or Gate is a device with two input ports and one output port.
+ * Or Gates ignore clock edges.
+ * <p>In response to each update message, they update their output ports
+ * according to the following truth table:
+ * 
+ *   F U T
+ * F|F|U|T
+ * U|U|U|T
+ * T|T|T|T
  * @author kyles
  *
  */

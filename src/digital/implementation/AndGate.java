@@ -1,12 +1,22 @@
 /**
- * 
+ * Name: Kyle Shal
+ * Student Number: 201923810
+ * Email: kashal@mun.ca
  */
 package digital.implementation;
 
 import digital.interfaces.PortInterface;
 import digital.interfaces.Value;
 
-/**
+/** Each And Gate is a device with two input ports and one output port.
+ * And Gates ignore clock edges.
+ * <p>In response to each update message, they update their output ports
+ * according to the following truth table:
+ * 
+ *   F U T
+ * F|F|F|F
+ * U|F|U|U
+ * T|F|U|T
  * @author kyles
  *
  */

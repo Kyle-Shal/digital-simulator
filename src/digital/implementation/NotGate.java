@@ -1,12 +1,21 @@
 /**
- * 
+ * Name: Kyle Shal
+ * Student Number: 201923810
+ * Email: kashal@mun.ca
  */
 package digital.implementation;
 
 import digital.interfaces.PortInterface;
 import digital.interfaces.Value;
 
-/**
+/** Each Not Gate is a device with one input port and one output port.
+ * Not Gates ignore clock edges.
+ * <p>In response to each update message, they update their output ports
+ * according to the following truth table:
+ * 
+ * F|T
+ * U|U
+ * T|F
  * @author kyles
  *
  */
