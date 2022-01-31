@@ -21,9 +21,15 @@ import digital.interfaces.Value;
  */
 public class InputDevice extends Device implements InputDeviceInterface{
 	
+	/** Sequence of values that the input device will be loaded with */
 	Value[] values;
+	/** Holds the number of times the clock function is called */
 	int clockCounter = 0;
 	
+	/** Create an Input device with the name given
+	 * 
+	 * @param name The name of the input device.
+	 */
 	public InputDevice(String name) {
 		super(name);
 	}

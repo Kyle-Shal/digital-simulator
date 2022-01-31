@@ -15,8 +15,13 @@ import digital.interfaces.Value;
  *
  */
 public class DFlipFlop extends Device{
+	/** A d-flip-flop has one input port*/
 	PortInterface inputPort;
 	
+	/** Create a d-flip-flop with a name, an input port and an output port
+	 * 
+	 * @param name The name of the d-flip-flop.
+	 */
 	public DFlipFlop(String name) {
 		super(name);
 		this.inputPort = new Port(false);

@@ -21,9 +21,14 @@ import digital.interfaces.Value;
  *
  */
 public class OrGate extends Device {
+	/** An Or gate has two input ports*/
 	PortInterface inputPort1;
 	PortInterface inputPort2;
 	
+	/** Create an Or Gate with a name, two input ports and an output port
+	 * 
+	 * @param name The name of the Or Gate.
+	 */
 	public OrGate(String name) {
 		super(name);
 		inputPort1 = new Port(false);
@@ -33,11 +38,12 @@ public class OrGate extends Device {
 
 	@Override
 	public boolean update() {
+		/** Temporarily hold the values of the input and output ports*/
 		Value tempValue = inputPort1.getValue();
 		Value tempValue2 = inputPort2.getValue();
 		Value oldOutputValue = outputPort.getValue();
 
-		
+		/**Compare the values of the input ports for the output value based on the Or truth table */
 		if (tempValue == Value.TRUE || tempValue2 == Value.TRUE) {
 			outputPort.setValue(Value.TRUE);
 			if (oldOutputValue != Value.TRUE) {

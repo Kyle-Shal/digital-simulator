@@ -21,9 +21,15 @@ import digital.interfaces.Value;
  *
  */
 public class AndGate extends Device {
+	
+	/** An And gate has two input ports*/
 	PortInterface inputPort1;
 	PortInterface inputPort2;
 
+	/** Create an And Gate with a name, two input ports and an output port
+	 * 
+	 * @param name The name of the And Gate.
+	 */
 	public AndGate(String name) {
 		super(name);
 		inputPort1 = new Port(false);
@@ -34,11 +40,12 @@ public class AndGate extends Device {
 
 	@Override
 	public boolean update() {
+		/** Temporarily hold the values of the input and output ports*/
 		Value tempValue = inputPort1.getValue();
 		Value tempValue2 = inputPort2.getValue();
 		Value oldOutputValue = outputPort.getValue();
 
-		
+		/**Compare the values of the input ports for the output value based on the And truth table */
 		if (tempValue == Value.FALSE || tempValue2 == Value.FALSE) {
 			outputPort.setValue(Value.FALSE);
 			if (oldOutputValue != Value.FALSE) {

@@ -23,9 +23,14 @@ import digital.interfaces.*;
  *
  */
 public class Port implements PortInterface{
+	/** Whether the port is an output or an input port*/
 	boolean isOutputPort;
-	private Value portValue = Value.UNKNOWN;
+	Value portValue = Value.UNKNOWN;
 	
+	/** Create port that is either and output or an input port
+	 * 
+	 * @param isOutputPort True if this port is an output port, false if its an input port
+	 */
 	Port(boolean isOutputPort){
 		this.isOutputPort = isOutputPort;
 		

@@ -20,8 +20,13 @@ import digital.interfaces.Value;
  *
  */
 public class NotGate extends Device {
+	/** A Not gate has one input port*/
 	PortInterface inputPort;
 	
+	/** Create a Not Gate with a name, an input port and an output port
+	 * 
+	 * @param name The name of the Not Gate.
+	 */
 	public NotGate(String name) {
 		super(name);
 		inputPort = new Port(false);
@@ -30,6 +35,7 @@ public class NotGate extends Device {
 
 	@Override
 	public boolean update() {
+		/**Compare the values of the input ports for the output value based on the Not truth table */
 		if (inputPort.getValue() == Value.TRUE) {
 			outputPort.setValue(Value.FALSE);
 			return true;
