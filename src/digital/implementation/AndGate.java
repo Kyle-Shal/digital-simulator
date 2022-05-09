@@ -1,4 +1,4 @@
-/**
+/**This file was prepared by Kyle Shal. It was completed by me alone.
  * Name: Kyle Shal
  * Student Number: 201923810
  * Email: kashal@mun.ca
